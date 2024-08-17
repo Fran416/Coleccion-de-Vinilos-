@@ -1,8 +1,34 @@
 package coleccionVinilos;
 
 public class ColeccionVinilos{
-    public static void main() {
-        String[][] coleccionVinilos= new String[100][3];
+    public static void main (String [] args){
+        //Prueba del codigo Auto Generada
+        String[][] vinilos= new String[100][3];
+        agregarVinilo(vinilos,"Iron Maiden", "Iron Maiden", "1980");
+        agregarVinilo(vinilos, "AC-DC", "Back in Black", "1981");
+        agregarVinilo(vinilos, "Kiss", "Destroyer", "1976");
+        agregarVinilo(vinilos, "Led Zeppelin", "IV", "1971");
+        agregarVinilo(vinilos, "Pink Floyd", "The Dark Side of the Moon", "1973");
+        agregarVinilo(vinilos, "The Beatles", "Abbey Road", "1969");
+        agregarVinilo(vinilos, "Queen", "A Night at the Opera", "1975");
+        agregarVinilo(vinilos, "Nirvana", "Nevermind", "1991");
+        agregarVinilo(vinilos, "The Rolling Stones", "Sticky Fingers", "1971");
+        agregarVinilo(vinilos, "Metallica", "Master of Puppets", "1986");
+
+        System.out.println("Espacio máximo de la coleccion: "+vinilos.length);
+
+        mostrarTotal(vinilos);
+
+        mostrarDisponibles(vinilos);
+        String artista = "Queen";
+
+        System.out.println("Buscando al artista: "+ artista);
+
+        mostrarBusquedaArtista(vinilos, artista);
+
+        mostrarColeccion(vinilos);
+
+
     }
 
     public static int totalVinilos(String[][] matrizVinilos){
